@@ -8,7 +8,7 @@ import { actionCreators, State } from '../actions';
 
 const ShowTodo = () => {
     const dispatch = useDispatch();
-    const {todos} = useSelector((state:State)=>state.toodo)
+    const {todos :any[]} = useSelector((state:State)=>state.toodo)
 
     const { getTodolist } = bindActionCreators(actionCreators, dispatch)
 
@@ -31,3 +31,7 @@ const ShowTodo = () => {
 }
 
 export default ShowTodo
+
+
+//@ts-ignore is used for ignore in ts
+//control shit p --> typescript restart and many more

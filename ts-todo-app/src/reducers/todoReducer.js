@@ -1,17 +1,21 @@
 import { Action } from "."
 import { ActionType } from "../actions/action.type"
 
+// interface Inter {
+//     todos : string[]
+// }
+
 const initialState = {
-    todos: []
+    toos:[]
 }
 
-export const todoReducer = (state = initialState, action:Action) =>{
+export const todoReducer = (state = initialState, action) =>{
     switch(action.type){
         case ActionType.GET_TODOLIST_SUCCESS:{
             return{
                 ...state,
                 todos: [
-                    ...state.todos,
+                    ...state.toos,
                     action.payload
                 ]
             }
